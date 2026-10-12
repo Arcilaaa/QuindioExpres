@@ -76,4 +76,6 @@ public class Paquete implements Comparable<Paquete> {
         return String.format("%s [%s, %.1f kg, prioridad %d, %d min]",
                 codigo, destino, peso, prioridad, tiempoEstimado);
     }
+
+    //Hola
 }
