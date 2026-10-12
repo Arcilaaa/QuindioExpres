@@ -2,8 +2,6 @@ package co.edu.uniquindio.poo;
 
 import java.util.List;
 
-public class Algoritmos {
-}
 package co.edu.uniquindio.poo;
 
 import java.util.List;
