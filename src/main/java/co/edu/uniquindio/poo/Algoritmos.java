@@ -45,7 +45,7 @@ public final class Algoritmos {
         return cuenta + contarPrioridadMinima(paquetes, prioridadMinima, indice + 1);
     }
 
-    // ---------- BÚSQUEDA BINARIA ----------
+    // BÚSQUEDA BINARIA
 
     /**
      * Busca un código en una lista ORDENADA por código (precondición).
