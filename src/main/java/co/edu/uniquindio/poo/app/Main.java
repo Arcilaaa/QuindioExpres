@@ -1,6 +1,7 @@
-package co.edu.uniquindio.poo;
+package co.edu.uniquindio.poo.app;
 
-import java.util.Comparator;
+import co.edu.uniquindio.poo.model.*;
+
 import java.util.List;
 
 public class Main {

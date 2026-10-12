@@ -7,7 +7,7 @@ public class Repartidor {
     private final String zona;
     private Boolean disponible;
 
-    public Repartidor(String identificacion, String nombre, String zona) {
+    public Repartidor(String identificacion, String nombre, String zona, boolean disponible) {
         if (identificacion == null || identificacion.trim().isEmpty()) {
             throw new IllegalArgumentException("El identificacion es obligatorio");
         }
