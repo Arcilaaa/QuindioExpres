@@ -11,7 +11,11 @@ public class Main {
 
         cargarDatos(centro);
 
+<<<<<<< HEAD
         System.out.println("=== 1. REGISTRO Y VALIDACIONES ===");
+=======
+        System.out.println("1. REGISTRO Y VALIDACIONES ");
+>>>>>>> origin/Arcila
         System.out.println("Paquetes registrados: " + centro.getRegistro().size());
         System.out.println("Repartidores registrados: " + centro.getRepartidores().size());
         probarValidaciones(centro);
@@ -22,19 +26,31 @@ public class Main {
             System.out.println("  " + r);
         }
 
+<<<<<<< HEAD
         System.out.println("\n=== 2. CONSULTA POR CÓDIGO (HashMap) ===");
+=======
+        System.out.println("\n 2. CONSULTA POR CÓDIGO (HashMap) ");
+>>>>>>> origin/Arcila
         System.out.println("¿Existe PQ731? " + centro.existePaquete("PQ731"));
         System.out.println("Datos PQ731: " + centro.consultarPaquete("PQ731"));
         System.out.println("¿Existe PQ000? " + centro.existePaquete("PQ000"));
 
+<<<<<<< HEAD
         System.out.println("\n=== 3. MUNICIPIOS ===");
+=======
+        System.out.println("\n 3. MUNICIPIOS ");
+>>>>>>> origin/Arcila
         System.out.println("Sin repetir (HashSet): " + centro.getMunicipios());
         System.out.println("Ordenados (TreeSet):   " + centro.getMunicipiosOrdenados());
         for (String municipio : centro.getMunicipiosOrdenados()) {
             System.out.println(municipio + " -> " + codigos(centro.paquetesDeMunicipio(municipio)));
         }
 
+<<<<<<< HEAD
         System.out.println("\n=== 4. DESPACHO POR ORDEN DE LLEGADA (Queue) ===");
+=======
+        System.out.println("\n 4. DESPACHO POR ORDEN DE LLEGADA (Queue) ");
+>>>>>>> origin/Arcila
         // El 3.º paquete es de Armenia y sus 2 repartidores están ocupados: no se despacha
         for (int i = 1; i <= 3; i++) {
             Paquete p = centro.despacharSiguiente(false);
@@ -44,7 +60,11 @@ public class Main {
         centro.entregarPaquete("PQ731");
         mostrarDespacho(centro, centro.despacharSiguiente(false));
 
+<<<<<<< HEAD
         System.out.println("\n=== 5. DESPACHO PRIORITARIO (PriorityQueue) ===");
+=======
+        System.out.println("\n 5. DESPACHO PRIORITARIO (PriorityQueue) ");
+>>>>>>> origin/Arcila
         // Se entregan los paquetes en ruta para liberar a los repartidores de Armenia
         centro.entregarPaquete("PQ942");
         centro.entregarPaquete("PQ829");
@@ -54,7 +74,11 @@ public class Main {
         }
         System.out.println("Pendientes: " + centro.cantidadPendientes());
 
+<<<<<<< HEAD
         System.out.println("\n=== 6. HISTORIAL (lista enlazada propia) ===");
+=======
+        System.out.println("\n 6. HISTORIAL (lista enlazada propia) ");
+>>>>>>> origin/Arcila
         centro.entregarPaquete("PQ603");
         centro.entregarPaquete("PQ321");
         ListaEnlazada<Paquete> historial = centro.getHistorial();
@@ -66,6 +90,7 @@ public class Main {
         System.out.println("fin");
         System.out.println("Posición 1: " + historial.obtener(1).getCodigo());
 
+<<<<<<< HEAD
         System.out.println("\n=== 7. PRUEBAS DE LA LISTA ENLAZADA (genérica) ===");
         probarLista();
 
@@ -81,6 +106,23 @@ public class Main {
         System.out.println("Paquete de mayor peso: " + centro.paqueteMayorPeso());
 
         System.out.println("\n=== 11. ORDENAMIENTOS (Comparable y Comparator) ===");
+=======
+        System.out.println("\n 7. PRUEBAS DE LA LISTA ENLAZADA (genérica) ");
+        probarLista();
+
+        System.out.println("\n 8. RECURSIVIDAD ");
+        System.out.printf("Peso total en Armenia: %.1f kg%n", centro.pesoTotalMunicipio("Armenia"));
+        System.out.println("Paquetes con prioridad >= 4: " + centro.contarPrioridadMinima(4));
+
+        System.out.println("\n 9. BÚSQUEDA BINARIA (lista ordenada por código) ");
+        System.out.println("Buscar PQ731: " + centro.buscarBinario("PQ731"));
+        System.out.println("Buscar PQ000: " + centro.buscarBinario("PQ000"));
+
+        System.out.println("\n 10. DIVIDE Y VENCERÁS ");
+        System.out.println("Paquete de mayor peso: " + centro.paqueteMayorPeso());
+
+        System.out.println("\n 11. ORDENAMIENTOS (Comparable y Comparator) ");
+>>>>>>> origin/Arcila
         System.out.println("Orden natural (código): " + codigos(centro.ordenadosPorCodigo()));
         mostrarOrden("Prioridad desc", centro.ordenarPor(Comparadores.POR_PRIORIDAD_DESC));
         mostrarOrden("Peso desc", centro.ordenarPor(Comparadores.POR_PESO_DESC));
@@ -88,7 +130,11 @@ public class Main {
         System.out.println("El registro original no cambió: " + codigos(centro.getRegistro().subList(0, 5)) + " ...");
     }
 
+<<<<<<< HEAD
     // ---------- Datos iniciales ----------
+=======
+    // Datos iniciales
+>>>>>>> origin/Arcila
 
     private static void cargarDatos(CentroDistribucion c) {
         // Repartidores (6 o más; dos en Armenia)
@@ -133,7 +179,11 @@ public class Main {
         c.registrarPaquete(new Paquete("PQ735", "Salento", 2.9, 5, 25));
     }
 
+<<<<<<< HEAD
     // ---------- Apoyo para la demostración ----------
+=======
+    // Apoyo para la demostración
+>>>>>>> origin/Arcila
 
     private static void probarValidaciones(CentroDistribucion c) {
         try {
